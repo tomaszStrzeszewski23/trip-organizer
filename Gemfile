@@ -47,6 +47,11 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+# 
+# Rails GraphQL support
+gem 'graphql', '~> 2.0'
+gem 'graphql-batch'      # For batch loading to avoid N+1 queries
+gem 'graphiql-rails', group: :development # Interactive GraphQL editor
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
