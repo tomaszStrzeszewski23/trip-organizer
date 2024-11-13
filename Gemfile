@@ -63,6 +63,27 @@ gem 'graphql-batch' # For batch loading to avoid N+1 queries
 gem 'devise'             # For user authentication
 gem 'devise-jwt'         # For JWT token support with Devise
 
+# CORS support for cross-origin requests
+gem 'rack-cors'
+
+# Background jobs (useful for async GraphQL mutations)
+gem 'sidekiq'            # For background job processing
+gem 'sidekiq-cron'       # For scheduled jobs (if needed)
+
+# File uploads (if needed)
+gem 'carrierwave'        # For handling file uploads
+gem 'mini_magick'        # For image processing
+
+# Miscellaneous
+gem 'dotenv-rails', groups: [:development, :test] # For environment variables
+gem 'pry-rails', group: :development # For better debugging in the console
+
+group :development, :test do
+  gem 'rspec-rails'      # Testing framework
+  gem 'factory_bot_rails' # Test data generation
+  gem 'faker'            # For generating fake data
+end
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
