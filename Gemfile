@@ -71,7 +71,7 @@ gem 'sidekiq'            # For background job processing
 gem 'sidekiq-cron'       # For scheduled jobs (if needed)
 
 # File uploads (if needed)
-gem 'carrierwave'        # For handling file uploads
+gem 'carrierwave', '>= 3.0.7'      # For handling file uploads
 gem 'mini_magick'        # For image processing
 
 # Miscellaneous
