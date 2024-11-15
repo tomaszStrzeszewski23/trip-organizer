@@ -27,11 +27,11 @@ gem 'turbo-rails'
 gem 'stimulus-rails'
 
 # For building REST APIs
-gem 'jbuilder'           # For rendering JSON responses
 gem 'active_model_serializers', '~> 0.10.0' # For advanced JSON serialization
+gem 'jbuilder' # For rendering JSON responses
 
 # Authorization
-gem 'pundit'             # For authorization policies
+gem 'pundit' # For authorization policies
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -71,17 +71,17 @@ gem 'sidekiq'            # For background job processing
 gem 'sidekiq-cron'       # For scheduled jobs (if needed)
 
 # File uploads (if needed)
-gem 'carrierwave', '>= 3.0.7'      # For handling file uploads
-gem 'mini_magick'        # For image processing
+gem 'carrierwave', '>= 3.0.7' # For handling file uploads
+gem 'mini_magick' # For image processing
 
 # Miscellaneous
-gem 'dotenv-rails', groups: [:development, :test] # For environment variables
+gem 'dotenv-rails', groups: %i[development test] # For environment variables
 gem 'pry-rails', group: :development # For better debugging in the console
 
 group :development, :test do
-  gem 'rspec-rails'      # Testing framework
   gem 'factory_bot_rails' # Test data generation
-  gem 'faker'            # For generating fake data
+  gem 'faker' # For generating fake data
+  gem 'rspec-rails' # Testing framework
 end
 
 group :development, :test do
@@ -93,8 +93,8 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 
-  gem 'bundler-audit'
   gem 'brakeman'
+  gem 'bundler-audit'
   gem 'rubocop', require: false # rubocop may not need to be required for certain configurations
 end
 
