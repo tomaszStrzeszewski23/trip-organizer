@@ -1,9 +1,10 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :location do
     country { 'Poland' }
     city { 'Poznan' }
-    state {'Wielkopolskie'}
+    state { 'Wielkopolskie' }
     zip { '60-600' }
-
   end
 end

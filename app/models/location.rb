@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Location < ApplicationRecord
   validates :country, presence: true
   validates :city, presence: true
