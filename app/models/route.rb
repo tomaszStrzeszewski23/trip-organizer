@@ -5,17 +5,10 @@ class Route < ApplicationRecord
     :unavailable,
     :available_soon
   ].freeze
-  ROUTE_TYPES = [
-    :mountain,
-    :cross,
-    :street
-  ]
+  ROUTE_TYPES = %w[mountain cross street].freeze
 
   validates :name, presence: true
   validates :distance, presence: true
   validates :difficulty, presence: true
-  validates :type, inclusion: {in: ROUTE_TYPES}, presence: true
-
-
-  belongs_to :city
+  validates :route_type, inclusion: {in: ROUTE_TYPES}, presence: true
 end
